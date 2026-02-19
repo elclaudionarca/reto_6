@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="../css/empresa.css" />
+    <link rel="stylesheet" href="../css/contacto.css" />
   </head>
   <body>
     <header>
@@ -27,23 +27,34 @@
       </nav>
     </header>
 
-    <section>
-      <h2>Envíanos un mensaje</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        aperiam corporis animi reiciendis laborum vel excepturi omnis eum illum
-        minus, id nesciunt debitis rerum distinctio eius, temporibus dolor
-        quibusdam ipsam.
-      </p>
-
-      <h2>Nuestra Misión y Vision</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        aperiam corporis animi reiciendis laborum vel excepturi omnis eum illum
-        minus, id nesciunt debitis rerum distinctio eius, temporibus dolor
-        quibusdam ipsam.
-      </p>
-    </section>
+    <main>
+      <form>
+        <h2>Envíanos un mensaje</h2>
+        <div class="formulario">
+          <div class="fields">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="fields">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" name="email" id="email" autocomplete="off" />
+          </div>
+          <div class="fields">
+            <label for="coment">Mensaje:</label>
+            <textarea id="coment"></textarea>
+          </div>
+          <div class="btn">
+            <button>Enviar Mensaje</button>
+          </div>
+        </div>
+      </form>
+    </main>
   </body>
 
   <footer>© 2024 Portal de Empleo - Todos los derechos reservados.</footer>
