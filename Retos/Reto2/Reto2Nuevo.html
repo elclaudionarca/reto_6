@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verificador de URL">
+    <link rel="stylesheet" href="Reto2Nuevo.css">
+</head>
+
+<body>
+    <h1>Reto 2</h1>
+    <br>
+    <header>Verificador de URL´s</header>
+    
+    <main> 
+        <input id="edtitText" placeholder="Escribe tu URL aquí" required>
+        <button id="btnVerificarInformacion" onclick="verificarURL()">Verificar</button>
+        <button id="btnLimpiarInformacion" onclick="borrarContenido()">Limpiar</button>
+
+    </main>
+    <main>
+        <label id="lblEstatus">Estatus</label>
+    </main>
+    <footer>Verificador Reto 2</footer>
+
+    <script>
+        let estatus = document.getElementById("lblEstatus");
+
+        function borrarContenido() {
+            document.getElementById("edtitText").value ="";
+            estatus.innerHTML = "Estatus";
+        }
+
+        function verificarURL() {
+            let editURL = document.getElementById("edtitText");
+            let valor = editURL.value.trim().toLowerCase();
+
+            const tieneProtocolo = valor.includes("http://") || valor.includes("https://");
+            const tieneCom = valor.includes(".com");
+
+            if(editURL.value.trim()=== "" ){
+                console.log("El input esta vacio");
+                estatus.innerHTML = "El input esta vacio";
+            }else{
+                if(tieneProtocolo && tieneCom){
+                    console.log("La URL es valida")
+                    estatus.innerHTML = "URL OK";
+                }else{
+                    estatus.innerHTML = "URL no OK";
+                }
+            }
+        }       
+    </script>
+</body>
+</html>
+

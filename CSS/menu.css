@@ -1,0 +1,51 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+header{
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #000;
+}
+
+li{
+    display: inline-block;
+    padding: 0px 20px;
+    list-style: none;
+}
+
+a{
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a3866;
+}
+
+a:hover{
+    color: #ff2753;
+    transition: all 1s;
+}
+
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+
+.btn{
+    background-color: #ff2753;
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: #fff
+}
+
+.btn:hover{
+    background-color: #4a3866;
+    color: #fff;
+}
